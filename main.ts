@@ -1,7 +1,7 @@
 /**
- * Controls the Adafruit 7-segment numeric led display
+ * Controls the TCL/GIC mechanical eyes
  */
-//% color="#ff7f50" icon="\uf06e" block="Numeric LED"
+//% color="#ff7f50" icon="\uf06e" block="Eyes"
 namespace eyes {
     //% blockId=splitIncoming
     //% block="split incoming"
