@@ -50,6 +50,7 @@ namespace eyes {
         _openAngle = close
     }
 
+    //% block
     export function leftAngle() {
         return _leftAngle
     }
