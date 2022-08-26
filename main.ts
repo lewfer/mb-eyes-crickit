@@ -29,6 +29,8 @@ namespace eyes {
     //% block="set angles left %left right %right"
     //% left.min=20 left.max=160
     //% right.min=20 right.right=160
+    //% left.defl=20
+    //% right.defl=160
     export function setLeftRightAngle(left: number, right: number) {
         _leftAngle = left
         _rightAngle = right
