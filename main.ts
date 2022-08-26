@@ -4,12 +4,12 @@
 //% color="#ff7f50" icon="\uf06e" block="Eyes"
 namespace eyes {
     //% blockId=splitIncoming
-    //% block="split incoming"
-    export function splitIncoming (str: string) {
+    //% block="split incoming %message"
+    export function splitIncoming (message: string) {
         comma1 = -1
         comma2 = -1
-        for (let index = 0; index <= str.length; index++) {
-            c = str.charAt(index)
+        for (let index = 0; index <= message.length; index++) {
+            c = message.charAt(index)
             if (c == ",") {
                 if (comma1 == -1) {
                     comma1 = index
@@ -18,11 +18,11 @@ namespace eyes {
                 }
             }
         }
-        button = str.substr(0, comma1)
-        xstr = str.substr(comma1 + 1, comma2 - comma1 - 1)
-        ystr = str.substr(comma2 + 1, 999)
-        xTilt = parseFloat(xstr)
-        yTilt = parseFloat(ystr)
+        _button = message.substr(0, comma1)
+        xstr = message.substr(comma1 + 1, comma2 - comma1 - 1)
+        ystr = message.substr(comma2 + 1, 999)
+        _xTilt = parseFloat(xstr)
+        _yTilt = parseFloat(ystr)
     }
 
     //% blockId=setLeftAngle
@@ -40,6 +40,8 @@ namespace eyes {
     //% block="set angles up %up down %down"
     //% up.min=20 up.max=160
     //% down.min=20 down.max=160
+    //% up.defl=30
+    //% down.defl=160
     export function setUpDownAngle(up: number, down: number) {
         _upAngle = up
         _downAngle = down
@@ -49,6 +51,8 @@ namespace eyes {
     //% block="set angles open %open close %close"
     //% open.min=20 open.max=160
     //% close.min=20 close.max=160
+    //% open.defl=30
+    //% close.defl=160
     export function setOpenCloseAngle(open: number, close: number) {
         _openAngle = open
         _openAngle = close
@@ -59,12 +63,46 @@ namespace eyes {
         return _leftAngle
     }
 
+    //% block
+    export function rightAngle() {
+        return _rightAngle
+    }
 
-    let yTilt = 0
-    let xTilt = 0
+    //% block
+    export function upAngle() {
+        return _upAngle
+    }
+
+    //% block
+    export function downAngle() {
+        return _downAngle
+    }
+
+    //% block
+    export function openAngle() {
+        return _openAngle
+    }
+
+    //% block
+    export function closeAngle() {
+        return _closeAngle
+    }
+
+    //% block
+    export function xTilt() {
+        return _xTilt
+    }
+
+    //% block
+    export function yTilt() {
+        return _yTilt
+    }
+
+    let _yTilt = 0
+    let _xTilt = 0
     let ystr = ""
     let xstr = ""
-    let button = ""
+    let _button = ""
     let c = ""
     let comma2 = 0
     let comma1 = 0
@@ -73,7 +111,7 @@ namespace eyes {
     let _upAngle = 30
     let _downAngle = 160
     let _openAngle = 30
-    let _closeAngle = 180
+    let _closeAngle = 160
     crickit.servo1.setAngle(90)
     crickit.servo2.setAngle(90)
     crickit.servo3.setAngle(_openAngle)
