@@ -30,26 +30,29 @@ namespace eyes {
     //% left.min=20 left.max=160
     //% right.min=20 left.right=160
     export function setLeftRightAngle(left: number, right: number) {
-        leftAngle = left
-        rightAngle = right
+        _leftAngle = left
+        _rightAngle = right
     }
 
     //% blockId=setUpDownAngle
     //% block="set up down angle"
     //% up.min=20 up.max=160
     export function setUpDownAngle(up: number, down: number) {
-        upAngle = up
-        downAngle = down
+        _upAngle = up
+        _downAngle = down
     }
 
     //% blockId=setOpenCloseAngle
     //% block="set open close angle"
     //% open.min=20 close.max=160
     export function setOpenCloseAngle(open: number, close: number) {
-        openAngle = open
-        openAngle = close
+        _openAngle = open
+        _openAngle = close
     }
 
+    export function leftAngle() {
+        return _leftAngle
+    }
 
 
     let yTilt = 0
@@ -60,15 +63,15 @@ namespace eyes {
     let c = ""
     let comma2 = 0
     let comma1 = 0
-    export let leftAngle = 20
-    export let rightAngle = 160
-    let upAngle = 30
-    let downAngle = 160
-    let openAngle = 30
-    let closeAngle = 180
+    let _leftAngle = 20
+    let _rightAngle = 160
+    let _upAngle = 30
+    let _downAngle = 160
+    let _openAngle = 30
+    let _closeAngle = 180
     crickit.servo1.setAngle(90)
     crickit.servo2.setAngle(90)
-    crickit.servo3.setAngle(openAngle)
+    crickit.servo3.setAngle(_openAngle)
     basic.forever(function () {
         
     })
