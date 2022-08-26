@@ -111,8 +111,8 @@ namespace eyes {
     let c = ""
     let comma2 = 0
     let comma1 = 0
-    let _leftAngle = 20
-    let _rightAngle = 160
+    let _leftAngle = 30
+    let _rightAngle = 150
     let _upAngle = 40
     let _downAngle = 140
     let _openAngle = 30
