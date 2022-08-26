@@ -113,8 +113,8 @@ namespace eyes {
     let comma1 = 0
     let _leftAngle = 20
     let _rightAngle = 160
-    let _upAngle = 30
-    let _downAngle = 160
+    let _upAngle = 40
+    let _downAngle = 140
     let _openAngle = 30
     let _closeAngle = 160
     crickit.servo1.setAngle(90)
