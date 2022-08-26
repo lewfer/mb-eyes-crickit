@@ -28,7 +28,7 @@ namespace eyes {
     //% blockId=setLeftAngle
     //% block="set angles left %left right %right"
     //% left.min=20 left.max=160
-    //% right.min=20 left.right=160
+    //% right.min=20 right.right=160
     export function setLeftRightAngle(left: number, right: number) {
         _leftAngle = left
         _rightAngle = right
@@ -37,6 +37,7 @@ namespace eyes {
     //% blockId=setUpDownAngle
     //% block="set angles up %up down %down"
     //% up.min=20 up.max=160
+    //% down.min=20 down.max=160
     export function setUpDownAngle(up: number, down: number) {
         _upAngle = up
         _downAngle = down
@@ -44,7 +45,8 @@ namespace eyes {
 
     //% blockId=setOpenCloseAngle
     //% block="set angles open %open close %close"
-    //% open.min=20 close.max=160
+    //% open.min=20 open.max=160
+    //% close.min=20 close.max=160
     export function setOpenCloseAngle(open: number, close: number) {
         _openAngle = open
         _openAngle = close
