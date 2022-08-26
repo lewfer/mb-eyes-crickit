@@ -98,6 +98,11 @@ namespace eyes {
         return _yTilt
     }
 
+    //% block
+    export function button() {
+        return _button
+    }
+
     let _yTilt = 0
     let _xTilt = 0
     let ystr = ""
