@@ -25,6 +25,32 @@ namespace eyes {
         yTilt = parseFloat(ystr)
     }
 
+    //% blockId=setLeftAngle
+    //% block="set left angle"
+    //% left.min=20 left.max=160
+    //% right.min=20 left.right=160
+    export function setLeftRightAngle(left: number, right: number) {
+        leftAngle = left
+        rightAngle = right
+    }
+
+    //% blockId=setUpDownAngle
+    //% block="set up down angle"
+    //% up.min=20 up.max=160
+    export function setUpDownAngle(up: number, down: number) {
+        upAngle = up
+        downAngle = down
+    }
+
+    //% blockId=setOpenCloseAngle
+    //% block="set open close angle"
+    //% open.min=20 close.max=160
+    export function setOpenCloseAngle(open: number, close: number) {
+        openAngle = open
+        openAngle = close
+    }
+
+
 
     let yTilt = 0
     let xTilt = 0
@@ -34,8 +60,8 @@ namespace eyes {
     let c = ""
     let comma2 = 0
     let comma1 = 0
-    let leftAngle = 20
-    let rightAngle = 160
+    export let leftAngle = 20
+    export let rightAngle = 160
     let upAngle = 30
     let downAngle = 160
     let openAngle = 30
